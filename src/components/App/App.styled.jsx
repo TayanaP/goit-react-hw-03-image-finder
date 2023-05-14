@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const App = styled. div`
+export const App = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;

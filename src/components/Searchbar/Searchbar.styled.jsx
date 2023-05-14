@@ -43,7 +43,7 @@ overflow: hidden;
   }
 `
 
-export const SearchButton_label = styled.span`
+export const SearchButtonLabel = styled.span`
 display: flex;
 align-items: center;
 width: 100%;

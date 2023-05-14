@@ -1,7 +1,7 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import PropTypes from 'prop-types'
 import * as yup from 'yup';
-import { SearchbarContainer, SearchForm, SearchField, SearchButton, SearchButton_label } from './Searchbar.styled';
+import { SearchbarContainer, SearchForm, SearchField, SearchButton, SearchButtonLabel } from './Searchbar.styled';
 
 const schema = yup.object().shape({
     name: yup
@@ -27,7 +27,7 @@ export function Searchbar({handleFormSubmit}) {
             >
                 <SearchForm autoComplete="off">
                     <SearchButton type="submit">
-                        <SearchButton_label>Search</SearchButton_label>
+                        <SearchButtonLabel>Search</SearchButtonLabel>
                     </SearchButton>
 
                     <SearchField
