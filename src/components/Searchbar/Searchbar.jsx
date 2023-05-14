@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
-import * as yup from 'yup';
+// import * as yup from 'yup';
 import { SearchbarContainer, Form, Button, ButtonLabel, Input } from './Searchbar.styled';
 
-const schema = yup.object().shape({
-    name: yup
-      .string().required()
-  });
+// const schema = yup.object().shape({
+//     name: yup
+//       .string().required()
+//   });
 
   export function Searchbar({ handleFormSubmit }) {
-    const initialValues = { name: '' };
+    // const initialValues = { name: '' };
   
     const handleSubmit = (event) => {
       event.preventDefault();

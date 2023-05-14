@@ -32,12 +32,13 @@ export class App extends Component {
         })
         .catch(() => this.setState({ error: true }))
         .finally(() => this.setState({ isLoading: false }));
+        return
     }
   }
 
   handleFormSubmit = name => {
     console.log(name)
-    this.setState({ name, page: 1, images: [], showLoadMore: false });
+    this.setState({ name, page: 1, images: []});
   };
 
   handleLoadMore = () => {
