@@ -24,10 +24,10 @@ export class App extends Component {
         isLoading: true, 
         showLoadMore: false });
       fetchImages(name, page)
-        .then(({ total_results, photos}) => {
+        .then(({ totalHits, images}) => {
           this.setState(prevState => ({
-            images: [...prevState.images, ...photos],
-            showLoadMore: page < Math.ceil(total_results/ 12),
+            images: [...prevState.images, ...images],
+            showLoadMore: page < Math.ceil(totalHits/ 12),
           }));
         })
         .catch(() => this.setState({ error: true }))
@@ -36,6 +36,7 @@ export class App extends Component {
   }
 
   handleFormSubmit = name => {
+    console.log(name)
     this.setState({ name, page: 1, images: [], showLoadMore: false });
   };
 

@@ -16,13 +16,13 @@ export async function fetchImages(name, page = 1) {
         safesearch: true,
       },
     });
-    const { total_results, photos } = response.data;
-    const images = photos.map(({ id, webformatURL, largeImageURL }) => ({
+    const { totalHits, hits } = response.data;
+    const images = hits.map(({ id, webformatURL, largeImageURL }) => ({
       id,
       webformatURL,
       largeImageURL,
     }));
-    return { total_results, images };
+    return { totalHits, images };
   } catch (error) {
     console.log(error.message);
   }

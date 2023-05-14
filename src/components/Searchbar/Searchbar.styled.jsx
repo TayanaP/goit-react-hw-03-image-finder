@@ -19,7 +19,7 @@ box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
   0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `
 
-export const SearchForm = styled.form`
+export const Form = styled.form`
 display: flex;
 align-items: center;
 // width: 100%;
@@ -29,7 +29,7 @@ border-radius: 3px;
 overflow: hidden;
 `
 
-export const SearchButton = styled.button`
+export const Button = styled.button`
 display: flex;
 align-items: center;
 width: 100%;
@@ -43,7 +43,7 @@ overflow: hidden;
   }
 `
 
-export const SearchButtonLabel = styled.span`
+export const ButtonLabel = styled.span`
 display: flex;
 align-items: center;
 width: 100%;
@@ -53,7 +53,7 @@ border-radius: 3px;
 overflow: hidden;
 `
 
-export const SearchField = styled.input`
+export const Input = styled.input`
 display: inline-block;
 width: 100%;
 font: inherit;
