@@ -24,9 +24,10 @@ export class App extends Component {
         isLoading: true, 
         });
       fetchImages(name, page)
-        .then(({ totalHits, hits}) => {
+        .then(({ totalHits, images }) => {
+          console.log(images ); 
           this.setState(state => ({
-            images: [...state.images, ...hits],
+            images: [...state.images, ...images ],
             showLoadMore: page < Math.ceil(totalHits/ 12),
           }));
         })

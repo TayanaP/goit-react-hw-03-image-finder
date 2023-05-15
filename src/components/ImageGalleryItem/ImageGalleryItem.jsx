@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import {GalleryItem, GalleryImage} from 'components/ImageGalleryItem/ImageGalleryItem.styled'
 
-export function ImageGalleryItem ({ image, onOpen }) {
+export function ImageGalleryItem ({  src, alt, onOpen }) {
     return (
         <GalleryItem>
             <GalleryImage 
-               src={image.src} 
-               alt={image.alt}
+               src={src} 
+               alt={alt}
                onClick = {onOpen}/>
         </GalleryItem>
     )

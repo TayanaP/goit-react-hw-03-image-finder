@@ -16,6 +16,7 @@ export async function fetchImages(name, page = 1) {
         safesearch: true,
       },
     });
+    console.log(data);
     const { totalHits, hits } = data;
     const images = hits.map(({ id, webformatURL, largeImageURL }) => ({
       id,
