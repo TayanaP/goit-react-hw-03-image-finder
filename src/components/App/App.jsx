@@ -22,11 +22,11 @@ export class App extends Component {
     if (prevState.name !== name || prevState.page !== page) {
       this.setState({ 
         isLoading: true, 
-        showLoadMore: false });
+        });
       fetchImages(name, page)
-        .then(({ totalHits, images}) => {
+        .then(({ totalHits, hits}) => {
           this.setState(state => ({
-            images: [...state.images, ...images],
+            images: [...state.images, ...hits],
             showLoadMore: page < Math.ceil(totalHits/ 12),
           }));
         })

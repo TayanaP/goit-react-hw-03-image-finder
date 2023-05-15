@@ -5,7 +5,7 @@ const KEY = '34963526-7ac0071891fccc5e52be44557';
 
 export async function fetchImages(name, page = 1) {
   try {
-    const { response } = await axios.get(URL, {
+    const { data } = await axios.get(URL, {
       params: {
         key: KEY,
         q: name,
@@ -16,7 +16,7 @@ export async function fetchImages(name, page = 1) {
         safesearch: true,
       },
     });
-    const { totalHits, hits } = response.data;
+    const { totalHits, hits } = data;
     const images = hits.map(({ id, webformatURL, largeImageURL }) => ({
       id,
       webformatURL,
