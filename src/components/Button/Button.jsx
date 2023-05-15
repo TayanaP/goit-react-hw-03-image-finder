@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import {ButtonLoad } from 'components/Button/Button.styled'
+import {ButtonLoad} from 'components/Button/Button.styled'
 
-export function Button ({LoadMore }) {
+export function Button ({onClick }) {
     return (
-      <ButtonLoad type="button" onClick={LoadMore}>
+      <ButtonLoad type="button" onClick={onClick}>
         Load more
       </ButtonLoad>
     );

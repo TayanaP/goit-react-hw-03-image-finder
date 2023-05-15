@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { fetchImages } from 'components/API/api';
-import { Searchbar } from 'components/Searchbar/Searchbar';
-import { ImageGallery } from 'components/ImageGallery/ImageGallery';
+import { Searchbar} from 'components/Searchbar/Searchbar';
+import { ImageGallery} from 'components/ImageGallery/ImageGallery';
 import { Button } from 'components/Button/Button';
 import { Loader } from 'components/Loader/Loader';
 import { Modal } from 'components/Modal/Modal';
@@ -25,8 +25,8 @@ export class App extends Component {
         showLoadMore: false });
       fetchImages(name, page)
         .then(({ totalHits, images}) => {
-          this.setState(prevState => ({
-            images: [...prevState.images, ...images],
+          this.setState(state => ({
+            images: [...state.images, ...images],
             showLoadMore: page < Math.ceil(totalHits/ 12),
           }));
         })
@@ -42,7 +42,7 @@ export class App extends Component {
   };
 
   handleLoadMore = () => {
-    this.setState(prevState => ({ page: prevState.page + 1 }));
+    this.setState(state => ({ page: state.page + 1 }));
   };
 
   onOpen = (src, alt) => {
@@ -69,6 +69,7 @@ export class App extends Component {
           <Modal
             src={showModal.src}
             alt={showModal.alt}
+            onOpen = {this.onOpen}
             onClose={this.onClose}
           />
         )}
