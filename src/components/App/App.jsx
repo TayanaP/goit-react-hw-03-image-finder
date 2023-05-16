@@ -33,7 +33,7 @@ export class App extends Component {
         })
         .catch(() => this.setState({ error: true }))
         .finally(() => this.setState({ isLoading: false }));
-        return
+       
     }
   }
 

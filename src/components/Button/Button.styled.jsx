@@ -1,8 +1,13 @@
 import styled from '@emotion/styled'
 
 export const ButtonLoad = styled.button`
-padding: 8px 16px;
-  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 8px 16px;
+  margin-top: 15px;
+  border-radius: 7px;
   background-color: #3f51b5;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
